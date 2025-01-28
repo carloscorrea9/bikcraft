@@ -1,3 +1,80 @@
-p{
-  color: blue;
+body{
+margin: 0px;
+font-family: Arial, Helvetica, sans-serif;
 }
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.header-bg{
+  background-color: #000000;
+}
+
+.header{
+  display: flex;  
+  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  max-width: 75rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+.header-menu{
+  display: flex;
+  flex-wrap: wrap;
+  gap:  2.5rem;
+}
+
+.header-menu a{
+  padding:  1rem 0rem;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1.125rem;
+  position: relative;
+}
+.header-menu a::after{
+content: "";
+display: block;
+height: .125rem;
+width: 0rem;
+background-color: #ffffff;
+margin-top: .25rem;
+transition: 0.3s;
+position: absolute;
+}
+.header-menu a:hover:after{
+  width: 100%;
+}
+
+@media (max-width: 50rem){
+  .header-menu a{
+    background: #111111;
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+  }
+  .header-menu a:hover{
+    background-color: #2e2e2e;
+  }
+  .header a::after{
+    display: none;
+  }
+}
+@media (max-width: 37.5rem){
+  .header-menu {
+   gap: .75rem;
+  }
+  .header-menu a{
+    padding: .5rem .75rem;
+    font-size: .875rem;
+  }
+ }
